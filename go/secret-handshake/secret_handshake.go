@@ -5,30 +5,26 @@ func Handshake(input uint) []string {
 	var empty []string
 	// for i := len(word) - 1; i >= 0; i-- {
 	// 	fmt.Println(i)
-	switch {
-	case input&1 == 1:
+	if input&1 == 1 {
 		print("\n", input)
 		empty = append(empty, "wink")
-	case input&2 == 2:
+	}
+	if input&2 == 2 {
 		print("\n", input)
 		empty = append(empty, "double blink")
-	case input&4 == 4:
+	}
+	if input&4 == 4 {
 		print("\n", input)
 		empty = append(empty, "close your eyes")
-	case input&8 == 8:
+	}
+	if input&8 == 8 {
 		print("\n", input)
 		empty = append(empty, "jump")
-
-	case input&16 == 16:
+	}
+	if input&16 == 16 {
 		print("\n", input)
 		empty = reverse(empty)
 	}
-
-	// case i == 2:
-	// 	if word[i] == 1 {
-	// 		empty = append(empty, "wink")
-	// 	}
-
 	return empty
 }
 
