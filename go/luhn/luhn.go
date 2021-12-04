@@ -14,7 +14,6 @@ func Valid(input string) bool {
 	var number int
 	var total int
 	double := len(input)%2 == 0
-	fmt.Println(double)
 	for _, r := range input {
 		number = int(r - '0')
 		if number < 0 || number > 9 {
